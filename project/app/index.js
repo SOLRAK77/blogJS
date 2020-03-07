@@ -9,3 +9,6 @@ require('./app');
 
 //Controllers
 require('./view/blog-post-controller');
+
+//Directives
+require('./view/blog-post-directive');
