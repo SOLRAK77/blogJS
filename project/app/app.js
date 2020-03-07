@@ -9,7 +9,7 @@ app.config(
             $stateProvider.state(alias, params);
         };
 
-        createState("view", {url: "/", templeate: './app/view/templates/view.html'});
+        createState("view", {url: "/", templateUrl: './app/view/templates/view.html'});
 
         $urlRouterProvider.otherwise('/');
     }
