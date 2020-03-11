@@ -19,5 +19,4 @@ app.directive("blogPost",function(){
     }
 );
 
-
 module.exports = app;

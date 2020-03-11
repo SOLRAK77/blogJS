@@ -5,5 +5,11 @@
     <p>
         {{post.content}}
     </p>
-    
+    <div class="row" ng-repeat="msg in post.messages">
+        <div class="col-md-11 col-md-offset-1">
+            <p>
+                <small>{{msg.message}}</small> -- Added By {{msg.author}}
+            </p>
+        </div>
+    </div>
 </div>
