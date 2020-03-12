@@ -12,3 +12,7 @@ require('./view/blog-post-controller');
 
 //Directives
 require('./view/blog-post-directive');
+
+//Services
+require('./view/mock-data-service');
+require('./view/data-service');
