@@ -13,6 +13,13 @@ var dataService = function(mockDataService){
         name: "Carlos Alfredo Castillo Perez",
         introduccion : "Me gusta saber de tecnologia y quisiera ser un empresario, me gustan los autos"
     }
+
+    this.socialData = {
+        works : "GMP Sistemas",
+        live : "Ciudad de Mexico",
+        birthday : "1977-02-17T05:00:00.000Z",
+        from:"Mexico"
+    }
 }
 
 var proto = dataService.prototype;
@@ -23,6 +30,10 @@ proto.getPostData = function(){
 
 proto.getBasicInfoData = function(){
     return this.basicInfo;
+}
+
+proto.getSocialData = function(){
+    return this.socialData;
 }
 
 app.service('dataService',['mockDataService',dataService]);
