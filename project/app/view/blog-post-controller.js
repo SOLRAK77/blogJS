@@ -3,15 +3,23 @@
 var app = require('../app');
 
 
-var blogPostController = function($scope, dataService){
+var blogPostController = function($scope, $location, $anchorScroll, dataService){
     
     $scope.posts= [];
 
     $scope.posts = dataService.getPostData();
     $scope.basicInfo = dataService.getBasicInfoData();
     $scope.social = dataService.getSocialData();
+
+    $scope.focusOnPost = function(postId){
+        if(!postId) return;
+
+        $location.hash('post'+postId)
+        $anchorScroll();
+        
+    };
 }
 
-app.controller('blogPostController',['$scope','dataService', blogPostController]);
+app.controller('blogPostController',['$scope','$location','$anchorScroll','dataService', blogPostController]);
 
 module.exports = app;

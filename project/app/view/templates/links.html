@@ -1,1 +1,19 @@
-links
+<div class="panel panel-default">
+    <div class="panel-body">
+      <h4 class="text-center">Post Links</h4>
+      <p>
+          <select class="form-control"
+            ng-options=" post.id as post.title for post in posts"
+            ng-model = "postID"
+            ng-change = "focusOnPost(postID)"
+          >
+          <option value=""></option>
+          </select>
+      </p>
+      <ul>
+          <li ng-repeat="post in posts">
+              <a ng-click="focusOnPost(post.id)">{{post.title}}</a>
+          </li>
+      </ul>        
+    </div>
+</div>
