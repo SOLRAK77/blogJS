@@ -10,6 +10,7 @@ app.config(
         };
 
         createState("view", {url: "/", templateUrl: './app/view/templates/view.html'});
+        createState("profile", {url: "/", templateUrl: './app/profile/templates/view.html'});
 
         $urlRouterProvider.otherwise('/');
     }
