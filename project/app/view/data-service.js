@@ -36,6 +36,10 @@ proto.getSocialData = function(){
     return this.socialData;
 }
 
+proto.saveBasicInfo = function(data){
+    this.basicInfo = data;
+}
+
 app.service('dataService',['mockDataService',dataService]);
 
 module.exports = app;

@@ -1,1 +1,19 @@
-Esta es la pagina de manage
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Información Basica</h3>
+    </div>
+    <div class="panel-body">
+      <form name="introForm" ng-submit="saveBasicForm()">
+          <label for="name">Nombre:</label>
+          <input type="text" ng-model="basicInfoEdit.name" class="form-control" id="name" placeholder="Coloca tu Nombre">
+
+          <label for="name">Introduccion:</label>
+          <textarea name="introduction" class="form-control" id="introduction" ng-model="basicInfoEdit.introduccion" cols="30" rows="5" placeholder="Cuentamos que te gusta"></textarea>
+
+          <div class="pull-right">
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+      </form>
+    </div>
+  </div>
