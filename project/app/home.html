@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-controller="homeController">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">     
@@ -6,9 +6,9 @@
         Blog Angular
         </a>
         <ul class="nav navbar-nav">
-            <li class="actived"><a ui-sref="view">View</a></li>
-            <li ><a ui-sref="profile">My Profile</a></li>
-            <li ><a ui-sref="entries">Blog Entries</a></li>
+            <li ng-class="{'active': currentView === 'view'}"><a ui-sref="view" ng-click="currentView= 'view'">View</a></li>
+            <li ng-class="{'active': currentView === 'profile'}"><a ui-sref="profile" ng-click="currentView= 'profile'">My Profile</a></li>
+            <li ng-class="{'active': currentView === 'entries'}"><a ui-sref="entries" ng-click="currentView= 'entries'">Blog Entries</a></li>
         </ul>
     </div><!-- /.navbar-header -->
   </div><!-- /.container-fluid -->

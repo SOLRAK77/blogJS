@@ -8,6 +8,7 @@ require('@uirouter/angularjs');
 require('./app');
 
 //Controllers
+require('./home-controller');
 require('./view/blog-post-controller');
 require('./profile/profile-controller');
 

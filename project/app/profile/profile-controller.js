@@ -2,7 +2,7 @@
 
 var app = require('../app');
 
-var profileController = function($scope, dataService ){
+var profileController = function($scope, dataService, toastr ){
 
     $scope.basicInfo = dataService.getBasicInfoData();    
     $scope.social = dataService.getSocialData();
@@ -13,18 +13,20 @@ var profileController = function($scope, dataService ){
 
     $scope.saveBasicForm = function(){
         
-        dataService.saveBasicInfo($scope.basicInfoEdit);
-        $scope.basicInfo = $scope.basicInfoEdit;
+        dataService.saveBasicInfo(angular.copy($scope.basicInfoEdit));
+        $scope.basicInfo = angular.copy($scope.basicInfoEdit);
+        toastr["success"]("Tu información fue actualizada")
     };
 
     $scope.saveSocialForm = function(){
         
-        dataService.saveSocialInfo($scope.socialEdit);
-        $scope.social = $scope.socialEdit;
+        dataService.saveSocialInfo(angular.copy($scope.socialEdit));
+        $scope.social = angular.copy($scope.socialEdit);
+        toastr["success"]("Tu información fue actualizada","continuar..")
     };
 
 }
 
-app.controller('profileController',['$scope','dataService', profileController]);
+app.controller('profileController',['$scope','dataService','toastr', profileController]);
 
 module.exports = app;
