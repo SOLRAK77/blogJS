@@ -17,3 +17,29 @@
       </form>
     </div>
   </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Información Redes Sociales</h3>
+    </div>
+    <div class="panel-body">
+      <form name="socialForm" ng-submit="saveSocialForm()">
+          <label for="name">Trabajo:</label>
+          <input type="text" ng-model="socialEdit.works" class="form-control" id="works" placeholder="¿En donde trabajas?">
+
+          <label for="name">Vives en:</label>
+          <input type="text" ng-model="socialEdit.live" class="form-control" id="live" placeholder="¿En donde vives?">
+
+          <label for="name">Fecha Nacimiento:</label>
+          <input type="date" ng-model="socialEdit.birthday" class="form-control" id="birthday" placeholder="¿Cuando naciste?">
+
+          <label for="name">Nacionalidad:</label>
+          <input type="text" ng-model="socialEdit.from" class="form-control" id="from" placeholder="¿En ue pais eres?">
+
+          <div class="pull-right">
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+      </form>
+    </div>
+  </div>

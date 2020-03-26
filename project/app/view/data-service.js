@@ -17,7 +17,7 @@ var dataService = function(mockDataService){
     this.socialData = {
         works : "GMP Sistemas",
         live : "Ciudad de Mexico",
-        birthday : "1977-02-17T05:00:00.000Z",
+        birthday : new Date("1977-02-17T05:00:00.000Z"),
         from:"Mexico"
     }
 }
@@ -38,6 +38,10 @@ proto.getSocialData = function(){
 
 proto.saveBasicInfo = function(data){
     this.basicInfo = data;
+}
+
+proto.saveSocialInfo = function(data){
+    this.socialData = data;
 }
 
 app.service('dataService',['mockDataService',dataService]);
