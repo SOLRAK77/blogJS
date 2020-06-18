@@ -11,7 +11,7 @@
   "author": "Carlos Alfredo Castillo Perez",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "@uirouter/angularjs": "^1.0.4",
     "angular-toastr": "^2.1.1",
     "body-parser": "^1.19.0",
